@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jstyle.test2025">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+
+    <application
+        android:name="com.jstyle.test2025.Myapp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity
+            android:name="com.jstyle.test2025.activity.DeviceScanActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.jstyle.test2025.activity.CsvActivity" />
+        <activity android:name="com.jstyle.test2025.activity.MainActivity" />
+        <activity android:name="com.jstyle.test2025.activity.BasicActivity" />
+        <activity android:name="com.jstyle.test2025.activity.DeviceInfoActivity" />
+        <activity android:name="com.jstyle.test2025.activity.DetailDataActivity" />
+        <activity android:name="com.jstyle.test2025.activity.TemperatureHistoryActivity" />
+        <activity android:name="com.jstyle.test2025.activity.HeartRateInfoActivity" />
+        <activity android:name="com.jstyle.test2025.activity.TotalDataActivity" />
+        <activity android:name="com.jstyle.test2025.activity.AlarmListActivity" />
+        <activity android:name="com.jstyle.test2025.activity.HeartRateSetActivity" />
+        <activity android:name="com.jstyle.test2025.activity.ActivityAlarmSetActivity" />
+        <activity android:name="com.jstyle.test2025.activity.ActivityLanguageSwitching" />
+        <activity android:name="com.jstyle.test2025.activity.OtherAlarmActivity" />
+        <activity android:name="com.jstyle.test2025.activity.NotifyActivity" />
+        <activity android:name="com.jstyle.test2025.activity.SetGoalActivity" />
+        <activity android:name="com.jstyle.test2025.activity.ActivitySetActivity" />
+        <activity android:name="com.jstyle.test2025.activity.StepTestActivity" />
+        <activity android:name="com.jstyle.test2025.activity.HrvDataReadActivity" />
+        <activity android:name="com.jstyle.test2025.activity.AlarmSetActivity" />
+        <activity android:name="com.jstyle.test2025.activity.ExerciseHistoryDataActivity" />
+        <activity android:name="com.jstyle.test2025.activity.ActivityModeActivity" />
+        <activity android:name="com.jstyle.test2025.activity.EcgActivity" />
+        <activity android:name="com.jstyle.test2025.activity.BloodOxygenActivity" />
+        <activity android:name="com.jstyle.test2025.activity.SocialDistanceActivity" />
+        <activity android:name="com.jstyle.test2025.activity.MusicActivity" />
+        <activity android:name="com.jstyle.test2025.activity.WeatherActivity" />
+        <activity android:name="com.jstyle.test2025.activity.ClockDialActivity" />
+        <activity android:name="com.jstyle.test2025.activity.SportModeActivity" />
+      <!--  <activity android:name="com.jstyle.test2025.activity.WorkOutReminderActivity" />-->
+        <activity android:name="com.jstyle.test2025.activity.GpsActivity" />
+        <activity android:name="com.jstyle.test2025.activity.MacActivity" />
+        <activity android:name="com.jstyle.test2025.activity.EcginfoActivity" />
+        <activity android:name="com.jstyle.test2025.activity.EcgPPgStatusActivity" />
+        <activity android:name="com.jstyle.test2025.activity.EcgDataActivity" />
+        <activity android:name="com.jstyle.test2025.activity.Spo2SetActivity" />
+        <activity android:name="com.jstyle.test2025.activity.MeasurementActivity" />
+        <activity android:name="com.jstyle.test2025.activity.QRActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="@string/fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+        <service android:name="com.jstyle.test2025.ble.BleService" />
+    </application>
+
+
+</manifest>
