@@ -45,6 +45,7 @@ android {
     lint {
         abortOnError false
     }
+    namespace 'com.jstyle.test2025'
 }
 
 dependencies {

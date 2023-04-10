@@ -28,6 +28,7 @@ android {
     lint {
         abortOnError false
     }
+    namespace 'com.jstyle.blesdk2025'
     makejar.dependsOn(build)
 }
 
